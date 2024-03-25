@@ -1,0 +1,82 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  --radius-big: 82px;
+
+  height: var(--vh);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-300);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-optical-sizing: auto;
+  scroll-padding: var(--header-height);
+
+  &__body {
+    min-width: 320px;
+    min-height: var(--vh);
+  }
+
+  &.open {
+    overflow: hidden;
+  }
+
+  @include media(mobile-l) {
+    --radius-big: 16px;
+  }
+}
+
+.section,
+.background {
+  padding: rem(60) 0;
+
+  @include media(tablet) {
+    padding: rem(32) 0;
+  }
+}
+
+.background {
+  background-color: var(--color-yellow-50);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+// .main {
+//   padding-top: var(--header-height);
+// }
+
+.logo {
+  margin-right: rem(121);
+  width: 100%;
+  max-width: 325px;
+
+  &__img {
+    width: 100%;
+  }
+
+  @include media(tablet-wide) {
+    max-width: 300px;
+  }
+}

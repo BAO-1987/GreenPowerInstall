@@ -1,0 +1,74 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.faq {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  details {
+    overflow: hidden;
+    border-radius: (var(--radius-main));
+    background-color: var(--color-yellow-50);
+
+    &[open] {
+      summary {
+        padding-bottom: 12px;
+
+        &::after {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+    padding: 16px 54px 16px 24px;
+    font-weight: var(--fw-600);
+    font-size: clamp(16px, 0.9583rem + 0.1852vi, 18px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+
+    &::after {
+      @include mask;
+
+      right: 24px;
+      top: 16px;
+      mask-image: url("../images/icons/chevron-down.svg");
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-yellow-400);
+      transform: scaleY(-1);
+      transition: transform 0.3s linear;
+
+      @include media(mobile-l) {
+        right: 5px;
+        top: 10px;
+      }
+    }
+
+    + div {
+      padding: 0 24px 16px;
+
+      p {
+        width: 97%;
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 1;
+
+        @include media(mobile-m) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin: 0 auto rem(48);
+    text-align: center;
+  }
+}

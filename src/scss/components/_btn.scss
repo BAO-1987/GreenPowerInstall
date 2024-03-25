@@ -1,0 +1,61 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+*[class].btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-big);
+  padding: 12px 24px;
+  width: 100%;
+  height: max-content;
+  max-width: fit-content;
+  font-weight: var(--fw-400);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-white);
+  background: var(--gradient-green);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-yellow-400);
+    color: var(--color-yellow-400);
+    background-color: var(--color-white);
+  }
+
+  &.formsapp-button {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    background-color: var(--color-blue-800) !important;
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-blue-800) !important;
+      color: var(--color-blue-800) !important;
+      background-color: var(--color-pink-100) !important;
+    }
+  }
+
+  &--sing,
+  &--request {
+    border-color: var(--color-yellow-900);
+    border-radius: calc(var(--radius-main) * 4);
+    padding: 10px 16px;
+    color: var(--color-yellow-900);
+    background-color: var(--color-white);
+  }
+
+  &--request {
+    border-color: transparent;
+    color: var(--color-white);
+    background-color: var(--color-yellow-900);
+  }
+
+  &--big {
+    margin: 0 auto;
+    max-width: 173px;
+  }
+}
