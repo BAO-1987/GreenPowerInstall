@@ -1,0 +1,80 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.products-cards {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
+  border-radius: var(--radius-main);
+  height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 7px;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  ul {
+    margin-bottom: 26px;
+    padding-left: 20px;
+
+    li {
+      list-style-type: disc;
+      font-size: 14px;
+      line-height: 1.6;
+
+      &::marker {
+        width: 5px;
+        height: 5px;
+        color: var(--color-black);
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+    width: fit-content;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-yellow-900);
+    gap: 10px;
+
+    &::after {
+      content: "";
+      position: relative;
+      width: 18px;
+      height: 18px;
+      // background-image: url("../images/icons/arrow.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.4s linear;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

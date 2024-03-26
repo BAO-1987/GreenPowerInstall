@@ -10,7 +10,7 @@
 
   // font-family
   --font-family-primary: "Lexend", sans-serif;
-   --font-family-secondary: "Roboto", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
 
   // font-weight
   --fw-300: 300;
@@ -21,18 +21,18 @@
   --fw-800: 800;
 
   // color
-  --color-white: #fff;
-  --color-dark-900: #171F23;
+  --color-white: #fefefe;
+  --color-dark-900: #171f23;
   --color-black: #000;
-  --color-green-50: #E6FFE4;
-  --color-green-100: #CAF662;
-  --color-green-400: #5EBB29;
-  --color-green-900: #1EA13B;
+  --color-green-50: #e6ffe4;
+  --color-green-100: #caf662;
+  --color-green-400: #5ebb29;
+  --color-green-900: #1ea13b;
 
   //  radius
   --radius-main: 8px;
 
   --gradient-white: linear-gradient(90deg, rgb(249, 242, 231) 25.667%, rgba(231, 243, 249, 0) 100%);
 
-  --gradient-green: linear-gradient(270.00deg, rgb(94, 187, 41),rgb(30, 161, 59) 100%);
+  --gradient-green: linear-gradient(270deg, rgb(94, 187, 41), rgb(30, 161, 59) 100%);
 }

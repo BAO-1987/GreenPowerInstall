@@ -15,10 +15,10 @@ h1 {
   color: var(--color-white);
 }
 
-h2,
 .title {
   position: relative;
   margin-bottom: 20px;
+  padding-bottom: 8px;
   line-height: 1.05;
   text-transform: uppercase;
   color: var(--color-green-900);
@@ -26,7 +26,7 @@ h2,
   &::before {
     content: "";
     position: absolute;
-    bottom: 8px;
+    bottom: 0;
     width: 60px;
     height: 2px;
     background-color: var(--color-green-900);
