@@ -1,0 +1,11 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.tabs {
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(60);
+    gap: 20px;
+  }
+}
