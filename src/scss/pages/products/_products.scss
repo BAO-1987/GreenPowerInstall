@@ -2,9 +2,12 @@
 @use "../../utils/mixins/" as *;
 
 .products {
+  margin-bottom: rem(55);
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(52);
     gap: 24px;
   }
 }

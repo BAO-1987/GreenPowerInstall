@@ -55,6 +55,18 @@
     color: var(--color-white);
   }
 
+  &--products {
+    color: var(--color-dark-900);
+
+    #{$root}__inner {
+      justify-content: center;
+
+      p {
+        margin-bottom: rem(46);
+      }
+    }
+  }
+
   @include media(tablet) {
     &::before {
       width: 100%;

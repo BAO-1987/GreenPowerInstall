@@ -18,7 +18,8 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
   color: var(--color-black);
-  background-color: var(--color-white);
+  background-color: var(--color-gray-10);
+  // bacround-color: grey;
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -38,7 +39,7 @@ body {
 
 .section,
 .background {
-  padding: rem(60) 0;
+  margin-bottom: rem(60);
 
   @include media(tablet) {
     padding: rem(32) 0;
@@ -68,15 +69,11 @@ body {
 // }
 
 .logo {
-  margin-right: rem(121);
+   margin-right: rem(121);
   width: 100%;
-  max-width: 325px;
-
-  &__img {
-    width: 100%;
-  }
+  max-width: 275px;
 
   @include media(tablet-wide) {
-    max-width: 300px;
+    max-width: 230px;
   }
 }

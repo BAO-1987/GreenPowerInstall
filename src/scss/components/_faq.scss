@@ -1,21 +1,21 @@
-@use "../../utils/functions/" as *;
-@use "../../utils/mixins/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
 
 .faq {
   &__item {
     &:not(:last-child) {
-      margin-bottom: 17px;
+      margin-bottom: 24px;
     }
   }
 
   details {
     overflow: hidden;
-    border-radius: (var(--radius-main));
-    background-color: var(--color-yellow-50);
+    border: 2px solid var(--color-green-900);
+    border-radius: calc((var(--radius-main)) * 3);
 
     &[open] {
       summary {
-        padding-bottom: 12px;
+        // padding-bottom: 24px;
 
         &::after {
           transform: scaleY(1);
@@ -26,11 +26,10 @@
 
   summary {
     position: relative;
-    padding: 16px 54px 16px 24px;
-    font-weight: var(--fw-600);
-    font-size: clamp(16px, 0.9583rem + 0.1852vi, 18px);
-    line-height: 1;
-    letter-spacing: 0.02em;
+    padding: 24px 56px 24px 32px;
+    font-weight: var(--fw-500);
+    font-size: clamp(18px, 1rem + 0.5556vi, 24px);
+    line-height: 1.25;
     cursor: pointer;
 
     &::after {
@@ -41,7 +40,7 @@
       mask-image: url("../images/icons/chevron-down.svg");
       width: 32px;
       height: 32px;
-      background-color: var(--color-yellow-400);
+      background-color: var(--color-green-900);
       transform: scaleY(-1);
       transition: transform 0.3s linear;
 
@@ -52,13 +51,10 @@
     }
 
     + div {
-      padding: 0 24px 16px;
+      padding: 0 32px 24px;
 
       p {
-        width: 97%;
-        font-size: 16px;
-        line-height: 1.6;
-        opacity: 1;
+        width: 98%;
 
         @include media(mobile-m) {
           width: 100%;
@@ -67,8 +63,8 @@
     }
   }
 
-  h2 {
-    margin: 0 auto rem(48);
-    text-align: center;
-  }
+  // h2 {
+  //   margin: 0 auto rem(48);
+  //   text-align: center;
+  // }
 }
