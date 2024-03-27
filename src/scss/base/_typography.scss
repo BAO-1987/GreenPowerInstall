@@ -29,7 +29,7 @@ h1 {
     bottom: 0;
     width: 60px;
     height: 2px;
-    background-color: var(--color-green-900);
+    background-color: var(--color-green-400);
   }
 }
 
@@ -38,6 +38,11 @@ h3 {
   line-height: 1.2;
 }
 
+.subtext,
 p {
   font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
+}
+
+.subtext {
+  font-weight: var(--fw-400);
 }

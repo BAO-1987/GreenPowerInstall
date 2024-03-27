@@ -18,7 +18,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
   color: var(--color-black);
-  background-color: var(--color-gray-10);
+  background-color: var(--color-grey-10);
   // bacround-color: grey;
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
@@ -64,12 +64,14 @@ body {
   min-height: var(--vh);
 }
 
-// .main {
-//   padding-top: var(--header-height);
-// }
+.main {
+  &--news {
+    padding-top: calc(var(--header-height) + 60px);
+  }
+}
 
 .logo {
-   margin-right: rem(121);
+  margin-right: rem(121);
   width: 100%;
   max-width: 275px;
 
@@ -77,3 +79,34 @@ body {
     max-width: 230px;
   }
 }
+
+
+ .link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    white-space: nowrap;
+    font-weight: var(--fw-400);
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--color-green-900);
+    gap: 16px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.4s linear;
+
+    &::after {
+      content: "";
+      position: relative;
+      width: 32px;
+      height: 32px;
+      background-image: url("../images/icons/arrow.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      text-decoration-color: var(--color-green-900);
+    }
+  }
