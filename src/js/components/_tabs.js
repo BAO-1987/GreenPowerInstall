@@ -1,6 +1,6 @@
 const tabsContainer = document.querySelector('.tabs');
 const tabsList = tabsContainer?.querySelector('.tabs__nav');
-const tabButtons = tabsList?.querySelectorAll('a');
+const tabButtons = tabsList ?.querySelectorAll('.tabs__link');
 const tabPanels = tabsContainer?.querySelectorAll('.tabs__panels > div');
 
 tabButtons?.forEach((tab, index) => {
@@ -14,8 +14,8 @@ tabButtons?.forEach((tab, index) => {
 });
 
 tabsContainer?.addEventListener('click', e => {
-  const clickedTab = e.target.closest('a');
-  const allTabs = tabsContainer.querySelectorAll('a');
+  const clickedTab = e.target.closest('.tabs__link');
+  const allTabs = tabsContainer.querySelectorAll('.tabs__link');
 
   if (!clickedTab) return;
   e.preventDefault();
@@ -25,23 +25,11 @@ tabsContainer?.addEventListener('click', e => {
   allTabs.forEach(tab => {
     tab.classList.remove('selected');
   });
+  
   clickedTab.classList.add('selected');
-
 });
 
 
-// function switchTab(newTab) {
-//   const activePanelId = newTab.getAttribute('href');
-//   const activePanel = tabsContainer.querySelector(activePanelId);
-
-//   tabPanels?.forEach(panel => {
-//     panel.setAttribute('hidden', true);
-//   });
-
-//   activePanel.removeAttribute('hidden', false);
-// }
-
-// Function to switch to the clicked tab
 function switchTab(newTab) {
   const activePanelId = newTab.getAttribute('href');
   const activePanel = tabsContainer.querySelector(activePanelId);
