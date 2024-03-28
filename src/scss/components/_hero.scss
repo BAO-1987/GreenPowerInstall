@@ -4,6 +4,8 @@
 .hero {
   $root: &;
 
+  margin-bottom: rem(40);
+
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,9 +26,10 @@
     border-radius: 61px;
     padding: 8px 16px 8px 8px;
     width: fit-content;
+    font-size: 14px;
     line-height: 1.71;
     background-color: var(--color-white);
-    gap: 4px;
+    gap: 8px;
 
     &::before {
       content: "";
@@ -52,14 +55,24 @@
     color: var(--color-white);
   }
 
-  &--products {
+  .btn {
+    padding: 13px 24px;
+    font-size: 18px;
+    color: var(--color-grey-10);
+  }
+
+  &--products,
+  &--services {
     #{$root}__inner {
       justify-content: center;
-
       p {
         margin-bottom: rem(46);
       }
+    }
+  }
 
+  &--products {
+    #{$root}__inner {
       h1,
       p {
         color: var(--color-dark-900);

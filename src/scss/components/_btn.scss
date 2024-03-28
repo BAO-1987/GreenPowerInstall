@@ -61,4 +61,22 @@
     color: var(--color-dark-900);
     background: var(--color-green-50);
   }
+
+  &--arrow {
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-grey-10);
+    gap: 24px;
+
+    &::after {
+      content: "";
+      position: relative;
+      width: 32px;
+      height: 32px;
+      background-image: url("../images/icons/arrow-right.svg");
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }

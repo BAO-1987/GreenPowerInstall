@@ -4,11 +4,11 @@
 .about {
   &__inner {
     display: flex;
+    align-items: center;
     padding-right: max(15px, calc((100% - 1216px) / 2));
   }
 
   &__image {
-    position: relative;
     flex-shrink: 0;
     margin-right: rem(127);
     width: calc(100% - 620px);
@@ -18,66 +18,11 @@
     flex-shrink: 0;
     width: 100%;
     max-width: 493px;
+    translate: 0 12px;
   }
 
-  &__list {
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    border-radius: 24px;
-    max-width: 183px;
-    position: absolute;
-    width: 100%;
-    padding: 16px;
-    box-shadow: 0 0 20px 0 rgba(23, 31, 35, 0.15);
-    background: var(--gradient-green);
-
-    &::before {
-      content: "";
-      position: relative;
-      align-self: flex-start;
-      margin-bottom: 16px;
-      border-radius: 56px 56px 56px 0;
-      width: 64px;
-      height: 64px;
-      background-image: url("../images/icons/skilled.svg");
-      background-position: 0 0;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    &--skilled {
-      top: -10px;
-      right: 102px;
-      background: var(--color-white);
-
-      &::before {
-        background-image: url("../images/icons/skilled.svg");
-      }
-    }
-
-    &--solar {
-      top: -50px;
-      right: 0;
-      border-radius: 0 24px 24px 0;
-      background: linear-gradient(90deg, #5ebb29 0%, #1ea13b 100%);
-
-      &::before {
-        background-image: url("../images/icons/solar.svg");
-      }
-    }
-
-    &--experience {
-      bottom: -10px;
-      right: 102px;
-      border-radius: 24px 0 24px 24px;
-      background: linear-gradient(225deg, #1ea13b 0%, #5ebb29 100%);
-
-      &::before {
-        background-image: url("../images/icons/experience.svg");
-      }
-    }
+  h2:not(.title) {
+    margin-bottom: 40px;
+    line-height: 1.26;
   }
 }
