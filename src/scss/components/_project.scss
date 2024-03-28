@@ -1,0 +1,54 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.project {
+  padding: rem(61) 0;
+  margin-bottom: 62px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -42px;
+    translate: 0 -316px;
+    width: 781px;
+    height: 781px;
+    background-image: url("../images/icons/cloud.svg");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 805px;
+  }
+
+  &__desc {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--main {
+    .title {
+      margin-bottom: 122px;
+    }
+  }
+}

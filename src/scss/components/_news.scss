@@ -1,0 +1,10 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.news {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}

@@ -2,6 +2,7 @@
 @use "../utils/mixins/" as *;
 
 .footer {
+  box-shadow: 0 -49px 134px 0 rgba(85, 148, 244, 0.06);
   &__top {
     padding: rem(60) 0;
   }
@@ -9,7 +10,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 65px;
+    gap: rem(67);
   }
 
   &__bottom {
@@ -17,8 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
-    font-size: 20px;
+    padding: 21px 0;
 
     &::before {
       content: "";
@@ -31,19 +31,20 @@
 
     .footer__list {
       display: flex;
+      align-items: center;
       gap: rem(40);
     }
-  }
 
-  &__copyright {
-    font-size: 16px;
-    line-height: 1.18;
-    opacity: 1;
+    .footer__item {
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
   }
 
   &__block {
     p {
-      margin-bottom: 29px;
+      margin-bottom: 20px;
       font-weight: var(--fw-500);
       line-height: 1.25;
     }
@@ -52,32 +53,25 @@
   &__item {
     font-size: 20px;
     line-height: 1.6;
-    color: var(--color-gray-400);
+    color: var(--color-grey-400);
 
     &:not(:last-child) {
       margin-bottom: 12px;
     }
   }
 
-  // &__list {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   gap: 16px;
-  // }
+  @include media(tablet-wide) {
+    &__grid {
+      gap: 30px;
+    }
+  }
 
-  // &__item {
-  //   &:not(:last-child) {
-  //     margin-right: rem(31);
-  //   }
-  // }
-
-  // &__link {
-  //   transition: color 0.3s linear;
-
-  //   &:hover {
-  //     color: var(--color-blue-800);
-  //   }
-  // }
+  @include media(tablet) {
+    &__grid {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
 
   @include media(mobile-l) {
     &__top {
@@ -91,18 +85,16 @@
       gap: 16px;
     }
 
-    &__item {
-      &:not(:last-child) {
-        margin-right: 16px;
-      }
+    &__grid {
+      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      width: fit-content;
     }
   }
 
-  @include media(mobile-m) {
-    &__item {
-      &:not(:last-child) {
-        margin: 0;
-      }
+  @include media(mobile-sm) {
+    &__grid {
+      grid-template-columns: 1fr;
     }
   }
 }

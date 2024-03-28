@@ -18,7 +18,7 @@ h1 {
 .title {
   position: relative;
   margin-bottom: 20px;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   line-height: 1.05;
   text-transform: uppercase;
   color: var(--color-green-900);
@@ -27,8 +27,8 @@ h1 {
     content: "";
     position: absolute;
     bottom: 0;
-    width: 60px;
-    height: 2px;
+    width: 56px;
+    height: 3px;
     background-color: var(--color-green-400);
   }
 }
