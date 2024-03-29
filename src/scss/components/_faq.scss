@@ -14,11 +14,11 @@
     border-radius: calc((var(--radius-main)) * 3);
 
     &[open] {
+      border-color: var(--color-green-400);
       summary {
-        // padding-bottom: 24px;
-
         &::after {
           transform: scaleY(1);
+          background-color: var(--color-green-400);
         }
       }
     }
@@ -63,8 +63,7 @@
     }
   }
 
-  // h2 {
-  //   margin: 0 auto rem(48);
-  //   text-align: center;
-  // }
+  .title {
+    margin-bottom: 60px;
+  }
 }

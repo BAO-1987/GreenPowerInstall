@@ -5,11 +5,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: calc(var(--radius-main) * 4);
+  border-radius: calc(var(--radius-main) * 3);
   box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
   height: 100%;
 
   &__content {
+    border-radius: calc(var(--radius-main) * 3);
     display: flex;
     flex-direction: column;
     padding: 24px;

@@ -63,6 +63,7 @@
 
   &--products,
   &--services {
+    margin-bottom: 60px;
     #{$root}__inner {
       justify-content: center;
       p {

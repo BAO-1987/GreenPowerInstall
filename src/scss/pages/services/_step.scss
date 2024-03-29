@@ -1,0 +1,44 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.step {
+  position: relative;
+
+  &__desc {
+    margin-bottom: rem(60);
+    width: 100%;
+    max-width: 1130px;
+  }
+
+  &__list {
+    counter-reset: step-counter;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    li {
+      counter-increment: step-counter;
+      padding: 24px;
+
+      &::before {
+        content: counter(step-counter, decimal-leading-zero);
+        position: relative;
+        display: block;
+        margin-bottom: 24px;
+        font-weight: var(--fw-600);
+        font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+        line-height: 0.58;
+        color: var(--color-green-400);
+      }
+    }
+
+    h3 {
+      margin-bottom: 24px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  } 
+}

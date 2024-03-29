@@ -2,89 +2,26 @@
 @use "../../utils/mixins/" as *;
 
 .benefits {
-  &__list {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+  margin-bottom: 55px;
+  &__image {
+    position: relative;
   }
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid var(--color-gray-50);
-    border-radius: calc(var(--radius-main) * 4);
-    padding: rem(30);
-    height: 100%;
-
-    &::before {
-      content: "";
-      position: relative;
-      align-self: flex-start;
-      margin-bottom: 24px;
-      width: 48px;
-      height: 48px;
-      background-image: url("../images/icons/bubble.svg");
-      background-position: 0 0;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
-    &--response {
-      &::before {
-        background-image: url("../images/icons/bubble.svg");
-      }
-    }
-
-    &--quality {
-      &::before {
-        background-image: url("../images/icons/quality.svg");
-      }
-    }
-
-    &--pricing {
-      &::before {
-        background-image: url("../images/icons/price.svg");
-      }
-    }
-
-    &--customer {
-      &::before {
-        background-image: url("../images/icons/people.svg");
-      }
-    }
-  }
-
-  h2 {
-    margin-bottom: rem(64);
-  }
-
-  h3 {
-    margin-bottom: 24px;
-  }
-
-  @include media(tablet) {
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  &__content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: 595px;
+    transform: translate(105px, -4px);
+    border-radius: calc(var(--radius-main) * 3);
+    padding: 24px 40px;
+    backdrop-filter: blur(72px);
+    background: rgba(0, 19, 55, 0.6);
+    color: var(--color-grey-10);
 
     h2 {
-      margin-bottom: 32px;
-    }
-  }
-
-  @include media(mobile-m) {
-    &__list {
-      grid-template-columns: 1fr;
-    }
-
-    &__item {
-      padding: 16px;
+      margin-bottom: 24px;
+      line-height: 1.26;
     }
   }
 }

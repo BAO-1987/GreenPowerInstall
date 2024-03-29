@@ -6,6 +6,36 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+
+    &--offerings {
+      counter-reset: offerings-counter;
+
+      .cards__content {
+        counter-increment: offerings-counter;
+
+        &::before {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          content: counter(offerings-counter, decimal);
+          position: absolute;
+          top: 27px;
+          left: 24px;
+          width: 32px;
+          height: 32px;
+          font-weight: var(--fw-700);
+          font-size: 20px;
+          line-height: 2;
+          color: var(--color-white);
+          border-radius: 50%;
+          background-color: var(--color-green-900);
+        }
+      }
+
+      h3 {
+        padding-left: 51px;
+      }
+    }
   }
 
   &__content {

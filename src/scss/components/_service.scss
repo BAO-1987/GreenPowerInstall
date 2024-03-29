@@ -16,6 +16,18 @@
     max-width: 493px;
   }
 
+  &--main {
+    padding: 78px 0;
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .service__content {
+      translate: 0 11px;
+    }
+  }
+
   .link {
     margin-bottom: rem(40);
   }
