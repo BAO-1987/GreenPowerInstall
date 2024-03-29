@@ -12,6 +12,10 @@
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 4);
     box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
+
+    img {
+      width: 100%;
+    }
   }
 
   &__content {
@@ -39,5 +43,37 @@
 
   .title {
     margin-bottom: 62px;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        &:last-child {
+          grid-column: 2 span;
+          margin: 0 auto;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      li {
+        img {
+          aspect-ratio: 16/9;
+        }
+
+        &:last-child {
+          grid-column: auto;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+    }
   }
 }

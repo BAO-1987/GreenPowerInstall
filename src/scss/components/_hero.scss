@@ -3,7 +3,8 @@
 
 .hero {
   $root: &;
-
+  position: relative;
+  z-index: 1;
   margin-bottom: rem(40);
 
   background-position: bottom;
@@ -63,7 +64,7 @@
 
   &--products,
   &--services {
-    margin-bottom: 60px;
+    margin-bottom: rem(60);
     #{$root}__inner {
       justify-content: center;
       p {
@@ -83,8 +84,10 @@
 
   @include media(tablet) {
     &::before {
-      width: 100%;
+      content: "";
+      position: absolute;
       background-color: var(--color-white);
+      inset: 0;
       opacity: 0.8;
     }
 
@@ -96,6 +99,23 @@
     &__content {
       max-width: 100%;
       translate: none;
+    }
+
+    &--products,
+    &--services {
+      margin-bottom: 40px;
+
+      #{$root}__inner {
+        justify-content: end;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h1,
+    p {
+      color: var(--color-dark-900);
     }
   }
 }

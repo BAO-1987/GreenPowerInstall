@@ -5,27 +5,29 @@
   padding: rem(61) 0;
   margin-bottom: 62px;
   position: relative;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
-    right: -42px;
-    translate: 0 -316px;
-    width: 781px;
-    height: 781px;
-    background-image: url("../images/icons/cloud.svg");
+    z-index: -1;
+    width: 435px;
+    height: 225px;
+    background-image: url("../images/icons/cloud+.svg");
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
+    translate: 180% -27%;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+  }
+
+  &__image {
+    border-radius: calc(var(--radius-main) * 3);
   }
 
   &__content {
@@ -36,6 +38,10 @@
   &__desc {
     display: flex;
     gap: 24px;
+
+    img {
+      border-radius: calc(var(--radius-main) * 3);
+    }
   }
 
   &__text {
@@ -52,7 +58,56 @@
 
   &--main {
     .title {
-      margin-bottom: 122px;
+      margin-bottom: rem(122);
+    }
+  }
+
+  @include media(desktop) {
+    &::before {
+      object-fit: contain;
+      translate: 120% -41%;
+    }
+  }
+
+  @include media(tablet) {
+    &::before {
+      top: 0;
+      left: 16px;
+      translate: 0;
+    }
+
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__image {
+      img {
+        border-radius: calc(var(--radius-main) * 3);
+        margin: 0 auto;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    .title {
+      margin-bottom: 35px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__desc {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include media(mobile-s) {
+    &::before {
+      width: 290px;
+      height: 160px;
     }
   }
 }

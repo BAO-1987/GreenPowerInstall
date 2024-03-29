@@ -20,7 +20,6 @@ body {
   letter-spacing: 0;
   color: var(--color-black);
   background-color: var(--color-grey-10);
-  // bacround-color: grey;
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -38,17 +37,12 @@ body {
   }
 }
 
-.section,
-.background {
+.section {
   margin-bottom: rem(60);
 
   @include media(tablet) {
-    padding: rem(32) 0;
+    margin-bottom: 40px;
   }
-}
-
-.background {
-  background-color: var(--color-yellow-50);
 }
 
 .container {
@@ -76,7 +70,7 @@ body {
 }
 
 .logo {
-  margin-right: rem(121);
+  margin-right: rem(30);
   width: 100%;
   max-width: 275px;
 
@@ -113,5 +107,30 @@ body {
 
   &:hover {
     text-decoration-color: var(--color-green-900);
+  }
+}
+
+.is-scrolling {
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  scroll-snap-align: start;
+  scrollbar-color: var(--color-green-900) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green-900);
   }
 }

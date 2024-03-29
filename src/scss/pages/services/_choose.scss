@@ -12,8 +12,21 @@
     width: 100%;
     max-width: 493px;
 
-    p:first-of-type {
-      margin-bottom: 32px;
+    p {
+      &:first-of-type {
+        margin-bottom: rem(32);
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+
+    &__content {
+      max-width: 100%;
     }
   }
 }

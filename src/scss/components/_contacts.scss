@@ -2,18 +2,26 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
+  margin-bottom: 60px;
   &__image {
+    position: relative;
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 3);
   }
 
   &__inner {
+    position: absolute;
+    right: 112px;
+    bottom: 16px;
+    padding: 24px;
     width: 100%;
     max-width: 596px;
+    border: 2px solid var(--color-grey-10);
     backdrop-filter: blur(66px);
     box-shadow: 106px -86px 100px 0 rgba(39, 113, 160, 0.14);
     background: linear-gradient(90deg, rgba(254, 254, 254, 0.7) 0%, rgba(218, 246, 202, 0.7) 100%);
     border-radius: calc(var(--radius-main) * 3);
+    color: var(--color-grey-400);
     gap: 24px;
   }
 
@@ -26,10 +34,6 @@
       display: block;
       text-align: left;
 
-      &:not(:last-of-type) {
-        margin-bottom: 18px;
-      }
-
       &:last-of-type {
         margin-bottom: 24px;
       }
@@ -37,23 +41,44 @@
 
     textarea,
     input {
+      padding: 14px 30px 14px 24px;
+      border-radius: 8px;
       border-color: transparent;
-      border-radius: 28px;
-      padding: 16px;
       width: 100%;
-      height: 48px;
-      background-color: var(--color-yellow-50);
+      height: 53px;
+      background-color: var(--color-grey-10);
 
       &::placeholder {
-        font-size: 16px;
-        line-height: 1;
-        opacity: 0.64;
+        font-size: 20px;
+        line-height: 1.25;
       }
     }
 
     textarea {
-      height: 156px;
+      padding: 24px;
+      height: 148px;
       resize: none;
     }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 22px;
+    gap: 24px;
+
+    label:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: clamp(24px, 1.25rem + 1.1111vi, 36px);
+    color: var(--color-dark-900);
+  }
+
+  p {
+    margin-bottom: 19px;
   }
 }

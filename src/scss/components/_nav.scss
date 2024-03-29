@@ -19,11 +19,7 @@
   &__list {
     display: flex;
     align-items: center;
-    margin-right: auto;
-
-    @include media(desktop) {
-      margin-right: 10px;
-    }
+    margin: 0 auto;
   }
 
   &__item {
@@ -31,7 +27,7 @@
       margin-right: 28px;
 
       @include media(tablet-wide) {
-        margin-right: 10px;
+        margin-right: 15px;
       }
     }
 

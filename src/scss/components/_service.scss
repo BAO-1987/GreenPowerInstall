@@ -2,7 +2,7 @@
 @use "../utils/mixins/" as *;
 
 .service {
-  padding: 60px 0;
+  padding: rem(60) 0;
 
   &__inner {
     display: flex;
@@ -16,11 +16,15 @@
     max-width: 493px;
   }
 
+  .link {
+    margin-bottom: rem(40);
+  }
+
   &--main {
-    padding: 78px 0;
+    padding: rem(78) 0;
 
     .title {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
     }
 
     .service__content {
@@ -28,7 +32,27 @@
     }
   }
 
-  .link {
-    margin-bottom: rem(40);
+  @include media(tablet) {
+    &--main {
+      padding: 35px 0;
+
+      .service__content {
+        translate: 0;
+      }
+
+      .title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
   }
 }

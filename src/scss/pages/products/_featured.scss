@@ -17,7 +17,7 @@
 
     h3 {
       margin-bottom: rem(39);
-      font-size: 23px;
+      font-size: clamp(18px, 1.0208rem + 0.463vi, 23px);
     }
 
     img {
@@ -27,13 +27,15 @@
 
   &__content {
     padding: 20px;
-    background-color: var(--color-white);
+    background-color: var(--color-grey-10);
     backdrop-filter: blur(40px);
   }
 
   &__price {
+    margin-top: auto;
     border-radius: 40px;
     padding: 16px 32px;
+    width: fit-content;
     font-weight: var(--fw-400);
     font-size: 20px;
     line-height: 1.2;
@@ -42,5 +44,59 @@
 
   h2 {
     margin-bottom: rem(55);
+  }
+
+  @include media(tablet-wide) {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--simple {
+      .featured__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured__item {
+        &:last-child {
+          grid-column: 2 span;
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &--simple {
+      .featured__list {
+        grid-template-columns: 1fr;
+      }
+
+      .featured__item {
+        &:last-child {
+          grid-column: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 }

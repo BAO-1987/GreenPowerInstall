@@ -28,7 +28,7 @@
         font-weight: var(--fw-600);
         font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
         line-height: 0.58;
-        color: var(--color-green-400);
+        color: var(--color-green-900);
       }
     }
 
@@ -40,5 +40,25 @@
     p {
       font-size: 18px;
     }
-  } 
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        padding: 16px;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
 }

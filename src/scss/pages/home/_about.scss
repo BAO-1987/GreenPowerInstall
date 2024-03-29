@@ -5,7 +5,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding-right: max(15px, calc((100% - 1216px) / 2));
+    padding-right: max(16px, calc((100% - 1216px) / 2));
   }
 
   &__image {
@@ -22,7 +22,20 @@
   }
 
   h2:not(.title) {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
     line-height: 1.26;
+  }
+
+  @include media(tablet) {
+    &__inner {
+      flex-direction: column-reverse;
+      padding: 0 16px;
+      gap: 24px;
+    }
+
+    &__image {
+      margin-right: 0;
+      width: fit-content;
+    }
   }
 }
