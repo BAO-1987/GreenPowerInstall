@@ -8,8 +8,6 @@ body {
 }
 
 .page {
-  --radius-big: 82px;
-
   height: var(--vh);
   height: 100vh;
   font-family: var(--font-family-primary);
@@ -21,7 +19,7 @@ body {
   color: var(--color-black);
   background-color: var(--color-grey-10);
   font-optical-sizing: auto;
-  scroll-padding: var(--header-height);
+  scroll-padding: calc(var(--header-height) + 60px);
 
   &__body {
     min-width: 320px;
@@ -30,10 +28,6 @@ body {
 
   &.open {
     overflow: hidden;
-  }
-
-  @include media(mobile-l) {
-    --radius-big: 16px;
   }
 }
 

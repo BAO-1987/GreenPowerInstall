@@ -12,40 +12,44 @@
 
         <div class="container">
 
-          <div class="contacts__image">
-            <img src="./images/contacts/contacts.jpg" alt="contacts image" width="1009" height="720" loading="lazy" />
-          </div>
+          <div class="contacts__wrapper">
 
-          <div class="contacts__inner">
-            <h1>
-              Get in Touch
-            </h1>
+            <div class="contacts__image">
+              <img src="./images/contacts/contacts.jpg" alt="contacts image" width="1009" height="720" loading="lazy" />
+            </div>
 
-            <p>
-              Let's Power Your Sustainable Future Together!
-            </p>
+            <div class="contacts__inner">
+              <h1>
+                Get in Touch
+              </h1>
 
-            <form class="contacts__form">
+              <p>
+                Let's Power Your Sustainable Future Together!
+              </p>
 
-              <div class="contacts__box">
+              <form class="contacts__form">
+
+                <div class="contacts__box">
+                  <label>
+                    <input type="text" placeholder="Your name">
+                  </label>
+
+                  <label>
+                    <input type="email" placeholder="Your Email Address">
+                  </label>
+                </div>
+
                 <label>
-                  <input type="text" placeholder="Your name">
+                  <textarea name="message" id="message" placeholder="Question"></textarea>
                 </label>
 
-                <label>
-                  <input type="email" placeholder="Your Email Address">
-                </label>
-              </div>
+                <button class="btn btn--arrow" type="submit">
+                  Send Message
+                </button>
 
-              <label>
-                <textarea name="message" id="message" placeholder="Question"></textarea>
-              </label>
+              </form>
+            </div>
 
-              <button class="btn btn--arrow" type="submit">
-                Send Message
-              </button>
-
-            </form>
           </div>
 
       </section>

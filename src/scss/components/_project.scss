@@ -2,10 +2,9 @@
 @use "../utils/mixins" as *;
 
 .project {
-  padding: rem(61) 0;
-  margin-bottom: 62px;
   position: relative;
-  isolation: isolate;
+  margin-bottom: rem(62);
+  padding: rem(61) 0;
 
   &::before {
     content: "";
@@ -70,14 +69,21 @@
   }
 
   @include media(tablet) {
+    margin-bottom: 0;
+    padding: 30px 0;
+
     &::before {
-      top: 0;
       left: 16px;
+      top: 0;
       translate: 0;
     }
 
     &__inner {
       flex-direction: column-reverse;
+    }
+
+    &__desc {
+      align-items: center;
     }
 
     &__content {
@@ -86,8 +92,8 @@
 
     &__image {
       img {
-        border-radius: calc(var(--radius-main) * 3);
         margin: 0 auto;
+        border-radius: calc(var(--radius-main) * 3);
         aspect-ratio: 16/9;
       }
     }
@@ -97,12 +103,16 @@
     }
   }
 
-  @include media(mobile-m) {
+  @include media(mobile-l) {
     &__desc {
       flex-direction: column;
-      align-items: center;
+    }
+
+    .link {
+      margin-bottom: 30px;
     }
   }
+
 
   @include media(mobile-s) {
     &::before {

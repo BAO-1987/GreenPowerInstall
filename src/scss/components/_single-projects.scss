@@ -29,6 +29,9 @@
     line-height: 1.25;
     color: var(--color-green-900);
     gap: 16px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.4s linear;
 
     &::before {
       content: "";
@@ -37,9 +40,13 @@
       height: 32px;
       background-image: url("../images/icons/arrow.svg");
       background-position: 0 0;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       transform: scaleX(-1);
+    }
+
+    &:hover {
+      text-decoration-color: var(--color-green-900);
     }
   }
 
