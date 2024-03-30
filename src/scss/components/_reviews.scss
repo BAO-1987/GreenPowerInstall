@@ -2,6 +2,8 @@
 @use "../utils/mixins" as *;
 
 .reviews {
+  padding: rem(88) 0 rem(46);
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,9 +24,9 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    backdrop-filter: blur(40px);
-    background: var(--color-white);
     height: 100%;
+    background: var(--color-white);
+    backdrop-filter: blur(40px);
 
     h3 {
       margin-bottom: 20px;
@@ -42,10 +44,12 @@
   }
 
   .title {
-    margin-bottom: 62px;
+    margin-bottom: rem(62);
   }
 
   @include media(tablet) {
+    padding: 40px 0;
+
     &__list {
       grid-template-columns: repeat(2, 1fr);
 
@@ -74,6 +78,10 @@
           max-width: 100%;
         }
       }
+    }
+
+    .title {
+      margin-bottom: 30px;
     }
   }
 }

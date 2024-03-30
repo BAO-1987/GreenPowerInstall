@@ -6,17 +6,17 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: calc(var(--radius-main) * 3);
-  box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
   height: 100%;
+  box-shadow: 0 35px 133px 0 rgba(113, 144, 190, 0.08);
 
   &__content {
-    border-radius: calc(var(--radius-main) * 3);
     display: flex;
     flex-direction: column;
+    border-radius: calc(var(--radius-main) * 3);
     padding: 24px;
-    backdrop-filter: blur(40px);
-    background: var(--color-white);
     height: 100%;
+    background: var(--color-grey-10);
+    backdrop-filter: blur(40px);
 
     .link {
       margin-top: auto;

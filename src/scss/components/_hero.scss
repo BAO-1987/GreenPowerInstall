@@ -57,14 +57,14 @@
   }
 
   .btn {
-    padding: 13px 24px;
+    padding: 14px 25px;
     font-size: 18px;
     color: var(--color-grey-10);
   }
 
   &--products,
   &--services {
-    margin-bottom: rem(60);
+    margin-bottom: rem(40);
     #{$root}__inner {
       justify-content: center;
       p {
@@ -74,6 +74,7 @@
   }
 
   &--products {
+    margin-bottom: rem(60);
     #{$root}__inner {
       h1,
       p {

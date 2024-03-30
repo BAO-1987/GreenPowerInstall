@@ -64,7 +64,7 @@ body {
 }
 
 .logo {
-  margin-right: rem(30);
+  margin-right: rem(43);
   width: 100%;
   max-width: 275px;
 
@@ -77,16 +77,16 @@ body {
   display: flex;
   align-items: center;
   width: fit-content;
-  white-space: nowrap;
   font-weight: var(--fw-400);
   font-size: clamp(18px, 1rem + 0.5556vi, 24px);
   line-height: 1.25;
-  color: var(--color-green-900);
-  background-color: transparent;
-  gap: 16px;
+  white-space: nowrap;
   text-decoration: underline;
   text-decoration-color: transparent;
+  color: var(--color-green-900);
+  background-color: transparent;
   transition: text-decoration-color 0.4s linear;
+  gap: 16px;
 
   &::after {
     content: "";
@@ -106,7 +106,6 @@ body {
 
 .is-scrolling {
   overflow-y: scroll;
-  padding-bottom: 20px;
   scroll-snap-align: start;
   scrollbar-color: var(--color-green-900) var(--color-white);
   scrollbar-width: thin;
@@ -126,5 +125,9 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: var(--color-green-900);
+  }
+
+  @include media(tablet) {
+    padding-bottom: 16px;
   }
 }

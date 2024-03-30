@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 82px;
-  padding: 10px 22px;
+  padding: 11px 23px;
   width: 100%;
   height: max-content;
   max-width: fit-content;
@@ -56,6 +56,10 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
+  }
+
+  &.formsapp-button {
+    font-family: var(--font-family-primary) !important;
   }
 }
 

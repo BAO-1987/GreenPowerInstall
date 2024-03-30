@@ -19,7 +19,7 @@
     max-width: 595px;
     color: var(--color-grey-10);
     background: rgba(0, 19, 55, 0.6);
-    transform: translate(105px, -4px);
+    transform: translate(105px, 0);
     backdrop-filter: blur(72px);
 
     h2 {
@@ -36,7 +36,7 @@
 
   @include media(tablet) {
     margin-bottom: 30px;
-    
+
     &__inner {
       display: flex;
       flex-direction: column-reverse;

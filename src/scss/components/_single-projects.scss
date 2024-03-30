@@ -27,11 +27,11 @@
     font-weight: var(--fw-400);
     font-size: 24px;
     line-height: 1.25;
-    color: var(--color-green-900);
-    gap: 16px;
     text-decoration: underline;
     text-decoration-color: transparent;
+    color: var(--color-green-900);
     transition: text-decoration-color 0.4s linear;
+    gap: 16px;
 
     &::before {
       content: "";
