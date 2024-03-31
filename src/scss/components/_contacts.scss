@@ -4,8 +4,11 @@
 .contacts {
   margin-bottom: rem(60);
 
-  &__image {
+  &__wrapper {
     position: relative;
+  }
+
+  &__image {
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 3);
   }
@@ -24,7 +27,6 @@
     background: linear-gradient(90deg, rgba(254, 254, 254, 0.7) 0%, rgba(218, 246, 202, 0.7) 100%);
     backdrop-filter: blur(66px);
     gap: 24px;
-    translate: -111px -11px;
   }
 
   &__form {
@@ -84,20 +86,10 @@
   }
 
   @include media(tablet-wide) {
-    &__inner {
-      translate: -10% -30%;
-    }
-
     &__image {
       img {
         width: 100%;
       }
-    }
-  }
-
-  @include media(tablet) {
-    &__inner {
-      translate: -11% -57%;
     }
   }
 

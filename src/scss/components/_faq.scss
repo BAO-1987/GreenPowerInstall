@@ -44,8 +44,6 @@
       background-color: var(--color-green-900);
       transform: scaleY(-1);
       transition: transform 0.3s linear;
-
-
     }
 
     + div {
@@ -71,7 +69,6 @@
 
       &::after {
         right: 5px;
-        top: 10px;
       }
     }
   }

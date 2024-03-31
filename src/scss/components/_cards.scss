@@ -37,4 +37,10 @@
   p {
     margin-bottom: 30px;
   }
+
+  @include media(tablet) {
+    br {
+      display: none;
+    }
+  }
 }

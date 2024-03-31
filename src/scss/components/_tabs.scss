@@ -24,5 +24,11 @@
     &__nav {
       margin-bottom: 35px;
     }
+
+    @include media(mobile-l) {
+      &__nav {
+        gap: 16px;
+      }
+    }
   }
 }

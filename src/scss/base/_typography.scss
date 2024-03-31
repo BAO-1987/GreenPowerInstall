@@ -41,6 +41,10 @@ h3 {
 .subtext,
 p {
   font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
+
+  @include media(mobile-m) {
+    font-size: 16px;
+  }
 }
 
 .subtext {
