@@ -30,9 +30,16 @@
           color: var(--color-white);
           background-color: var(--color-green-900);
         }
+
+        @include media(mobile-l) {
+          &::before {
+            top: 24px;
+          }
+        }
       }
 
       h3 {
+        position: relative;
         padding-left: rem(51);
       }
     }
@@ -47,6 +54,7 @@
   &--home {
     .cards__content {
       h3 {
+        position: relative;
         font-size: clamp(18px, 0.9167rem + 0.9259vi, 28px);
       }
     }
