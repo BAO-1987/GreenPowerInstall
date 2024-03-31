@@ -7,15 +7,16 @@
   z-index: 10;
   width: 100%;
 
-  transition-property: transform, box-shadow;
+  transition-property: transform;
   transition-duration: 0.15s;
 
   &__inner {
     border-radius: 100px;
-    border: 1px solid var(--color-green-50);
+    border: 1px solid var(--color-green-100);
     padding: 14px 16px;
     background-color: var(--color-white);
   }
+
 
   &.hide {
     transform: translateY(-200%);
