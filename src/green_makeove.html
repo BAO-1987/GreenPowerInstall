@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-projects">
 
@@ -14,7 +16,8 @@
 
           <div class="single-projects__inner">
 
-            <img src="./images/projects/davis_residence.jpg" alt="The Green Makeover of the Davis Residence Home" width="389" height="500" loading="lazy" />
+            <img src="./images/projects/davis_residence.jpg" alt="The Green Makeover of the Davis Residence Home"
+              width="389" height="500" loading="lazy" />
 
             <div class="single-projects__content">
 
@@ -49,7 +52,8 @@
           </div>
 
           <div class="single-projects__image">
-            <img src="./images/projects/davis_residence_big.jpg" alt="The Green Makeover of the Davis Residence" width="1216" height="330" loading="lazy" />
+            <img src="./images/projects/davis_residence_big.jpg" alt="The Green Makeover of the Davis Residence"
+              width="1216" height="330" loading="lazy" />
           </div>
 
         </div>
@@ -57,6 +61,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

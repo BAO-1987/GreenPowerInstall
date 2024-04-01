@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-projects">
 
@@ -22,20 +24,20 @@
               <a class="single-projects__link" href="projects.html">Back</a>
 
               <h1>
-               Sunshine Illuminates the Smith Family Home
+                Sunshine Illuminates the Smith Family Home
               </h1>
 
               <p class="subtext">
-               Discover how solar energy brightened the lives of the Smith family, bringing cost savings and
-               environmental benefits to their household.
+                Discover how solar energy brightened the lives of the Smith family, bringing cost savings and
+                environmental benefits to their household.
               </p>
 
               <div class="single-projects__desc">
                 <p>
-                 At the Smith Home, our residential solar panel installation project brought sustainable energy
-                 solutions to life. Overcoming challenges related to roof orientation and structural considerations, we
-                 implemented a tailored solar system. Today, the Smiths revel in the benefits of solar power, from
-                 significant cost savings to environmental stewardship.
+                  At the Smith Home, our residential solar panel installation project brought sustainable energy
+                  solutions to life. Overcoming challenges related to roof orientation and structural considerations, we
+                  implemented a tailored solar system. Today, the Smiths revel in the benefits of solar power, from
+                  significant cost savings to environmental stewardship.
                 </p>
 
                 <p>
@@ -58,6 +60,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

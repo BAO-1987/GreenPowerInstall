@@ -24,6 +24,10 @@
     background: var(--gradient-green-hover);
   }
 
+  &.formsapp-button {
+    font-family: var(--font-family-primary) !important;
+  }
+
   &--request {
     margin: 0 !important;
     color: var(--color-grey-10) !important;
@@ -47,6 +51,7 @@
   }
 
   &--arrow {
+    padding: 12px 12px 12px 32px;
     font-size: 20px;
     line-height: 1.2;
     color: var(--color-grey-10);
@@ -63,13 +68,10 @@
       background-repeat: no-repeat;
     }
   }
-
-  &.formsapp-button {
-    font-family: var(--font-family-primary) !important;
-  }
 }
 
 .btn-reset {
+  border-radius: 0 !important;
   margin-bottom: 0 !important;
   padding: 0 !important;
   font-family: var(--font-family-primary) !important;

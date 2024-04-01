@@ -6,14 +6,17 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{"page"}'></include>
+
+    <main class="main  main--section">
 
       <article class="single-products">
 
         <div class="container">
           <div class="single-products__inner">
 
-            <img src="./images/products/panels/400W_panels_big.jpg" alt="400W Solar Mono Panel" width="596" height="552" loading="lazy" />
+            <img src="./images/products/panels/400W_panels_big.jpg" alt="400W Solar Mono Panel" width="596" height="552"
+              loading="lazy" />
 
             <div class="single-products__content">
 
@@ -88,8 +91,11 @@
 
       </article>
 
+      <include src="./html/_footer.html"></include>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

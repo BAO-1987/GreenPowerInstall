@@ -2,10 +2,11 @@
 @use "../../utils/mixins/" as *;
 
 .step {
-  position: relative;
+  margin-bottom: rem(158);
+  padding: rem(40) 0;
 
   &__desc {
-    margin-bottom: rem(60);
+    margin-bottom: rem(85);
     width: 100%;
     max-width: 1130px;
   }
@@ -14,7 +15,7 @@
     counter-reset: step-counter;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: rem(48) 24px;
 
     li {
       counter-increment: step-counter;
@@ -43,8 +44,11 @@
   }
 
   @include media(tablet) {
+    margin-bottom: 0;
+
     &__list {
       grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
 
       li {
         padding: 16px;

@@ -11,7 +11,9 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: rem(67);
+    width: 100%;
+    max-width: 771px;
+    gap: rem(77);
   }
 
   &__bottom {
@@ -106,6 +108,10 @@
   @include media(mobile-sm) {
     &__grid {
       grid-template-columns: 1fr;
+    }
+
+    &__block {
+      text-align: center;
     }
   }
 }

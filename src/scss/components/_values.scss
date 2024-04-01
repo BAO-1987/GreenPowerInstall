@@ -87,15 +87,17 @@
   }
 
   &--services {
-    ul {
-      padding-left: 8px;
-      text-align: left;
+    .values__item {
+      ul {
+        padding-left: 28px;
+        text-align: left;
 
-      li {
-        list-style-type: disc;
+        li {
+          list-style-type: disc;
 
-        &:not(:last-child) {
-          margin-bottom: 20px;
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
         }
       }
     }

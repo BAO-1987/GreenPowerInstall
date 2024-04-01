@@ -3,8 +3,8 @@
 
 .project {
   position: relative;
-  margin-bottom: rem(62);
-  padding: rem(61) 0;
+  margin-bottom: rem(94);
+  padding: 30px 0;
 
   &::before {
     content: "";
@@ -12,7 +12,7 @@
     z-index: -1;
     width: 435px;
     height: 225px;
-    background-image: url("../images/icons/cloud+.svg");
+    background-image: url("../images/icons/cloud.svg");
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,6 +26,7 @@
   }
 
   &__image {
+    overflow: hidden;
     border-radius: calc(var(--radius-main) * 3);
   }
 

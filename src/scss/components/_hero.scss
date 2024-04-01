@@ -47,7 +47,7 @@
 
   &__content {
     width: 100%;
-    max-width: 445px;
+    max-width: 423px;
   }
 
   p {
@@ -74,7 +74,7 @@
   }
 
   &--products {
-    margin-bottom: rem(60);
+    margin-bottom: rem(90);
     #{$root}__inner {
       h1,
       p {
@@ -117,10 +117,6 @@
     h1,
     p {
       color: var(--color-dark-900);
-    }
-
-    br {
-      display: none;
     }
   }
 

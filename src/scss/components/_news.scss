@@ -2,6 +2,8 @@
 @use "../utils/mixins" as *;
 
 .news {
+  margin-bottom: 35px;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,6 +43,8 @@
       h3 {
         position: relative;
         padding-left: rem(51);
+        width: 100%;
+        max-width: 235px;
       }
     }
   }
@@ -52,6 +56,10 @@
   }
 
   &--home {
+    .title {
+      margin-bottom: 33px;
+    }
+
     .cards__content {
       h3 {
         position: relative;
@@ -71,6 +79,10 @@
           max-width: 450px;
         }
       }
+
+      h3 {
+        max-width: 100%;
+      }
     }
   }
 
@@ -80,7 +92,7 @@
 
       li {
         img {
-          aspect-ratio: 16/9;
+          aspect-ratio: 18/9;
         }
 
         &:last-child {

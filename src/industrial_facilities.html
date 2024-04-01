@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-projects">
 
@@ -33,7 +35,8 @@
               <div class="single-projects__desc">
                 <p>
                   Our solar integration project at industrial facilities demonstrates the feasibility and benefits of
-                  renewable energy adoption in large-scale operations. Overcoming challenges like complex energy needs and
+                  renewable energy adoption in large-scale operations. Overcoming challenges like complex energy needs
+                  and
                   regulatory requirements, we implemented solar solutions that enhance efficiency and sustainability.
                 </p>
 
@@ -58,6 +61,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

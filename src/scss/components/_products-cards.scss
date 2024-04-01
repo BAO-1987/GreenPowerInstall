@@ -24,6 +24,8 @@
 
   h2 {
     margin-bottom: 22px;
+    width: 100%;
+    max-width: 275px;
     font-weight: var(--fw-400);
     font-size: clamp(20px, 1rem + 1.1111vi, 32px);
     line-height: 1.25;
@@ -48,6 +50,13 @@
 
   .btn {
     margin-top: auto;
+  }
+
+  @include media(tablet) {
+    h2 {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   @include media(mobile-l) {

@@ -16,31 +16,34 @@
     max-width: 493px;
   }
 
+  &__image {
+    width: 100%;
+    max-width: 616px;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .link {
     margin-bottom: rem(40);
   }
 
   &--main {
-    padding: rem(78) 0;
+    margin-bottom: rem(41);
+    padding: rem(80) 0;
 
     .title {
-      margin-bottom: rem(40);
-    }
-
-    .service__content {
-      translate: 0 11px;
+      margin-bottom: rem(42);
     }
   }
 
   @include media(tablet) {
     padding: 30px 0;
-    
-    &--main {
-      padding: 35px 0;
 
-      .service__content {
-        translate: 0;
-      }
+    &--main {
+      margin-bottom: 0;
+      padding: 35px 0;
 
       .title {
         margin-bottom: 20px;

@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-products">
 
@@ -56,14 +58,14 @@
 
                 <li>
                   <span>Number of MPPTs:</span>
-                   4</li>
+                  4</li>
 
                 <li>
-                  <span>Number of Inputs per MPPT:</span> 
+                  <span>Number of Inputs per MPPT:</span>
                   1</li>
 
                 <li>
-                  <span>Rated output power (VA):</span> 
+                  <span>Rated output power (VA):</span>
                   1600VA</li>
 
                 <li>
@@ -72,9 +74,9 @@
 
                 <li>
                   <span>Ambient temperature range:</span>
-                   -40°C to 65°C</li>
+                  -40°C to 65°C</li>
 
-                <li><span>Warranty:</span> 
+                <li><span>Warranty:</span>
                   10 years</li>
 
               </ul>
@@ -87,8 +89,11 @@
 
       </article>
 
+      <include src="./html/_footer.html"></include>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

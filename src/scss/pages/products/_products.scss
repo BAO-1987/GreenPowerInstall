@@ -22,14 +22,10 @@
           max-width: 450px;
         }
       }
-
-      br {
-        display: none;
-      }
     }
   }
 
-  @include media(mobile-l) {
+  @include media(mobile-m) {
     &__list {
       grid-template-columns: 1fr;
 

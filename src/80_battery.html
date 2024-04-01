@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{"page": "news"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-products">
 
@@ -77,6 +79,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

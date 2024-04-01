@@ -21,8 +21,9 @@
     transform: translateY(-200%);
   }
 
+
   @include media(tablet) {
-      top: 15px;
+    top: 15px;
 
     .nav__inner {
       position: fixed;

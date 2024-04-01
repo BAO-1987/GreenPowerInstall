@@ -9,7 +9,6 @@ body {
 
 .page {
   height: var(--vh);
-  height: 100vh;
   font-family: var(--font-family-primary);
   font-weight: var(--fw-300);
   font-style: normal;
@@ -54,7 +53,7 @@ body {
 }
 
 .main {
-  &--news {
+  &--section {
     padding-top: calc(var(--header-height) + 89px);
 
     @include media(tablet) {
@@ -70,37 +69,6 @@ body {
 
   @include media(tablet-wide) {
     max-width: 230px;
-  }
-}
-
-.link {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  font-weight: var(--fw-400);
-  font-size: clamp(18px, 1rem + 0.5556vi, 24px);
-  line-height: 1.25;
-  white-space: nowrap;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  color: var(--color-green-900);
-  background-color: transparent;
-  transition: text-decoration-color 0.4s linear;
-  gap: 16px;
-
-  &::after {
-    content: "";
-    position: relative;
-    width: 32px;
-    height: 32px;
-    background-image: url("../images/icons/arrow.svg");
-    background-position: 0 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  &:hover {
-    text-decoration-color: var(--color-green-900);
   }
 }
 

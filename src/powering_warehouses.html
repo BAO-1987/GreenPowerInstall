@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-projects">
 
@@ -49,8 +51,8 @@
           </div>
 
           <div class="single-projects__image">
-            <img src="./images/projects/warehouses_big.jpg"
-              alt="Solar Powering Warehouses for a Sustainable Future" width="1216" height="330" loading="lazy" />
+            <img src="./images/projects/warehouses_big.jpg" alt="Solar Powering Warehouses for a Sustainable Future"
+              width="1216" height="330" loading="lazy" />
           </div>
 
         </div>
@@ -58,6 +60,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

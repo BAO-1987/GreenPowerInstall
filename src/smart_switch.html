@@ -6,7 +6,9 @@
 <body class="page__body">
   <div class="site-container">
 
-    <main class="main">
+    <include src="./html/_header.html" locals='{ "page"}'></include>
+
+    <main class="main main--section">
 
       <article class="single-products">
 
@@ -24,7 +26,7 @@
               </div>
 
               <h1>
-               Smart Switch RSFSS
+                Smart Switch RSFSS
               </h1>
 
               <ul class="single-products__list">
@@ -54,7 +56,7 @@
                 </li>
                 <li>
                   <span>Feedback contact:</span> 24Vdc-300mA max
-                  </li>
+                </li>
                 <li>
                   <span>Enclosure rating:</span> IP66
                 </li>
@@ -75,6 +77,8 @@
       </article>
 
     </main>
+
+    <include src="./html/_footer.html"></include>
 
   </div>
 </body>

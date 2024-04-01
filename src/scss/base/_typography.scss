@@ -3,7 +3,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+.subtitle {
   overflow: hidden;
   font-weight: var(--fw-500);
   font-size: clamp(24px, 1.2083rem + 1.2963vi, 38px);
@@ -13,6 +14,11 @@ h1 {
   margin-bottom: 10px;
   line-height: 1.26;
   color: var(--color-white);
+}
+
+h3 {
+  font-size: clamp(18px, 0.9167rem + 0.3704vi, 20px);
+  line-height: 1.2;
 }
 
 .title {
@@ -33,20 +39,42 @@ h1 {
   }
 }
 
-h3 {
-  font-size: clamp(18px, 1.0833rem + 0.1852vi, 20px);
-  line-height: 1.2;
-}
-
 .subtext,
 p {
-  font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
-
-  @include media(mobile-m) {
-    font-size: 16px;
-  }
+  font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
 }
 
 .subtext {
   font-weight: var(--fw-400);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-weight: var(--fw-400);
+  font-size: clamp(18px, 1rem + 0.5556vi, 24px);
+  line-height: 1.25;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  color: var(--color-green-900);
+  background-color: transparent;
+  transition: text-decoration-color 0.4s linear;
+  gap: 16px;
+
+  &::after {
+    content: "";
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/icons/arrow.svg");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    text-decoration-color: var(--color-green-900);
+  }
 }

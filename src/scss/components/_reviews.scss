@@ -2,7 +2,7 @@
 @use "../utils/mixins" as *;
 
 .reviews {
-  padding: rem(88) 0 rem(46);
+  padding: rem(88) 0 rem(41);
 
   &__list {
     display: grid;
@@ -45,6 +45,10 @@
 
   .title {
     margin-bottom: rem(62);
+  }
+
+  &--projects {
+    padding-bottom: rem(65);
   }
 
   @include media(tablet) {
