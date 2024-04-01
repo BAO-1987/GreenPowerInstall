@@ -2,6 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .choose {
+  margin-bottom: rem(60);
 
   &__inner {
     display: flex;
@@ -35,6 +36,8 @@
   }
 
   @include media(tablet) {
+    margin-bottom: 0;
+    
     &__inner {
       flex-direction: column-reverse;
       gap: 24px;
